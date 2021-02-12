@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'JoseFin Sans';
+    }
+    .container {
+      width: 1440px;
+      margin: 0 auto;
+    }
+    .header-container {
+      background-image: url(images/desktop/image-hero.jpg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 700px;
+      padding: 1px;
+    }
+    .menu {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      justify-self: center;
+      align-items: center;
+      margin-top: 60px;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      padding-left: 15px;
+      display: inline-block;
+    }
+    .header-title {
+      font-size: 4.7em;
+      width: 650px;
+      color: rgba(255, 255, 255, 0.836);
+      border: 1px solid rgba(255, 255, 255, 0.836);
+      padding: 55px 15px 25px 55px;
+      margin-top: 130px;
+    }
+    .vr-section {
+      margin: 100px auto;
+      position: relative;
+    }
+    .vr-section img {
+      width: 920px;
+    }
+    .vr-description-container {
+      background-color: white;
+      position: absolute;
+      left: 50%;
+      top: 39%;
+      padding: 80px 0 80px 100px;
+      width: 550px;
+    }
+    .vr-title {
+      font-size: 4em;
+      margin-bottom: 25px;
+    }
+    .vr-description {
+      font-size: 1.21em;
+      color: rgba(0, 0, 0, 0.637);
+      line-height: 1.5;
+    }
+    .seeall-btn {
+      display: flex;
+      justify-content: space-between;
+      margin: 50px auto;
+      font-size: 2.8em;
+    }
+    .seeall-btn .btn {
+      padding: 5px 30px;
+      background-color: hsl(0, 0%, 100%);
+      font-family: 'Alata';
+      word-spacing: 2px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      color: white;
+      background-color: black;
+      transition: .75s;
+    }
+    .vr-list {
+      margin: 0 auto;
+    }
+    .flex {
+      display: flex;
+      margin-top: 50px;
+      margin-bottom: 80px;
+      justify-content: space-between;
+    }
+    .flex div {
+      position: relative;
+      cursor: pointer;
+    }
+    .flex img {
+      filter: brightness(90%);
+    }
+    .flex .vr-item-description {
+      position: absolute;
+      color: hsl(0, 0%, 93%);
+      bottom: 4%;
+      width: 120px;
+      font-size: 1.4em;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .flex div:hover img {
+      opacity: .3;
+      transition: .5s;
+    }
+    .flex div:hover .vr-item-description {
+      color: black;
+      transition: .5s;
+    }
+    .footer {
+      background-color: black;
+      padding: 10px 120px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .footer-flex {
+      display: flex;
+      margin: 20px 0;
+      justify-content: space-between;
+    }
+    .social-icons a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+    }
+    .menu-footer a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+    }
+    a {
+      position: relative;
+    }
+    a::after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+      left: 0;
+      right: 0;
+    }
+    a:hover::after {
+      margin: 0 auto;
+      width: 40%; 
+    }
+    .copyright {
+      color: rgba(255, 255, 255, 0.239);
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @media only screen and (max-width: 375px;) {
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="header-container">
+    <div class="container">
+      <div class="menu">
+        <div>
+          <img src="images/logo.svg" alt=""></div>
+        <div>
+          <a href="">About</a>
+          <a href="">Careers</a>
+          <a href="">Events</a>
+          <a href="">Products</a>
+          <a href="">Support</a>
+        </div>
+      </div>
+      <div class="header-title">IMMERSIVE EXPERIENCES THAT DELIVER</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="vr-section">
+      <div>
+        <img src="images/desktop/image-interactive.jpg" alt="">
+      </div>
+      <div class="vr-description-container">
+        <div class="vr-title">THE LEADER IN INTERACTIVE VR</div>
+        <div class="vr-description">
+          Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.
+        </div>
+      </div>
+    </div>
+    <div class="seeall-btn">
+      <div>OUR CREATIONS</div>
+      <div>
+        <button class="btn">SEE ALL</button>
+      </div>
+    </div>
+    <div class="vr-list">
+      <div class="flex">
+        <div>
+          <img src="images/desktop/image-deep-earth.jpg" alt="">
+          <div class="vr-item-description">DEEP EARTH</div>
+        </div>
+        <div>
+          <img src="images/desktop/image-night-arcade.jpg" alt="">
+          <div class="vr-item-description">NIGHT ARCADE</div>
+        </div>
+        <div>
+          <img src="images/desktop/image-soccer-team.jpg" alt="">
+          <div class="vr-item-description">SOCCER TEAM VR</div>
+        </div>
+        <div>
+          <img src="images/desktop/image-grid.jpg" alt="">
+          <div style="word-spacing: 13px;" class="vr-item-description">THE GRID</div>
+        </div>
+      </div>
+      <div class="flex">
+        <div>
+          <img src="images/desktop/image-from-above.jpg" alt="">
+          <div class="vr-item-description">FROM UP ABOVE VR</div>
+        </div>
+        <div>
+          <img src="images/desktop/image-pocket-borealis.jpg" alt="">
+          <div class="vr-item-description">POCKET BOREALIS</div></div>
+        <div>
+          <img src="images/desktop/image-curiosity.jpg" alt="">
+          <div class="vr-item-description">THE CURIOSITY</div>
+        </div>
+        <div>
+          <img src="images/desktop/image-fisheye.jpg" alt="">
+          <div class="vr-item-description">MAKE IT FISHEYE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="footer-flex">
+        <div>
+          <img src="images/logo.svg" alt="">
+        </div>
+        <div class="social-icons">
+          <a href=""><img src="images/icon-facebook.svg" alt=""></a>
+          <a href=""><img src="images/icon-twitter.svg" alt=""></a>
+          <a href=""><img src="images/icon-pinterest.svg" alt=""></a>
+          <a href=""><img src="images/icon-instagram.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="footer-flex">
+        <div class="menu-footer">
+          <a href="">About</a>
+          <a href="">Careers</a>
+          <a href="">Events</a>
+          <a href="">Products</a>
+          <a href="">Support</a>
+        </div>
+        <div class="copyright">© 2021 Loopstudios. All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.facebook.com/Hac.Toyger/">Toyger</a>.
+  </div>
+</body>
+<script>
+
+</script>
+</html>
