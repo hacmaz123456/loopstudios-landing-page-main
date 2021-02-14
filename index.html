@@ -326,6 +326,40 @@
         margin: 25px auto;
       }
     }
+    @media only screen and (max-width: 600px) {
+      .container {
+        padding: 0 50px;
+      }
+      .flex .vr-item-description {
+        left: 30%;
+        top: 56%;
+        font-size: 1.4em;
+        width: 130px;
+      }
+    }
+    @media only screen and (max-width: 375px) {
+      .logo {
+        width: 70%;
+      }
+      .container {
+        padding: 0 20px;
+      }
+      .header-title {
+        font-size: 10.5vw;
+      }
+      .seeall-btn {
+        font-size: 1.2em;
+      }
+      .flex .vr-item-description {
+        left: 30%;
+        top: 58%;
+        width: 90px;
+        font-size: 1em;
+      }
+      .footer-flex img {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -466,29 +500,39 @@
     }
 
     // Change source image PC - Mobile
-    window.onresize = function() {
+    var platform = "desktop";
+
+    checkScreen(); // Check onload
+    changeImg(); // Check onload
+
+    function checkScreen() { // Detect screen
       if (window.matchMedia('screen and (max-width: 900px)').matches) {
         platform = "mobile";
       }
       else {
         platform = "desktop";
       }
-      changeImg();
-      function changeImg() {
-        var imgList = document.getElementsByClassName("img-list");
-        var listImg = ["images/" + platform + "/image-deep-earth.jpg",
-                      "images/" + platform + "/image-night-arcade.jpg",
-                      "images/" + platform + "/image-soccer-team.jpg",
-                      "images/" + platform + "/image-grid.jpg",
-                      "images/" + platform + "/image-from-above.jpg",
-                      "images/" + platform + "/image-pocket-borealis.jpg",
-                      "images/" + platform + "/image-curiosity.jpg",
-                      "images/" + platform + "/image-fisheye.jpg"];
-        
-        for (var i = 0; i < imgList.length; i++) {
-          imgList[i].src = listImg[i];
-        }
+    }
+
+    function changeImg() { // Change images src
+      var imgList = document.getElementsByClassName("img-list");
+      var listImg = ["images/" + platform + "/image-deep-earth.jpg",
+                    "images/" + platform + "/image-night-arcade.jpg",
+                    "images/" + platform + "/image-soccer-team.jpg",
+                    "images/" + platform + "/image-grid.jpg",
+                    "images/" + platform + "/image-from-above.jpg",
+                    "images/" + platform + "/image-pocket-borealis.jpg",
+                    "images/" + platform + "/image-curiosity.jpg",
+                    "images/" + platform + "/image-fisheye.jpg"];
+
+      for (var i = 0; i < imgList.length; i++) {
+        imgList[i].src = listImg[i];
       }
+    }
+
+    window.onresize = function() { // Check when resize
+      checkScreen();
+      changeImg();
     };
   </script>
 </body>
