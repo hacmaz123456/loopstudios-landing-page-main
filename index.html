@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
   <title>Frontend Mentor | Loopstudios landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -18,14 +19,16 @@
       font-family: 'JoseFin Sans';
     }
     .container {
-      width: 1440px;
+      max-width: 1440px;
       margin: 0 auto;
+      padding: 0 150px;
     }
     .header-container {
       background-image: url(images/desktop/image-hero.jpg);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       height: 700px;
+      margin: 0 auto;
       padding: 1px;
     }
     .menu {
@@ -39,46 +42,49 @@
     .menu a {
       color: white;
       text-decoration: none;
-      padding-left: 15px;
+      margin-left: 15px;
       display: inline-block;
     }
     .header-title {
-      font-size: 4.7em;
-      width: 650px;
+      font-size: 4.4em;
+      max-width: 600px;
       color: rgba(255, 255, 255, 0.836);
       border: 1px solid rgba(255, 255, 255, 0.836);
-      padding: 55px 15px 25px 55px;
-      margin-top: 130px;
+      padding: 30px 0 30px 50px;
+      margin-top: 150px;
     }
     .vr-section {
       margin: 100px auto;
       position: relative;
     }
     .vr-section img {
-      width: 920px;
+      width: 720px;
     }
     .vr-description-container {
       background-color: white;
+      padding: 70px 0 0 100px;
+      margin-left: auto;
       position: absolute;
-      left: 50%;
-      top: 39%;
-      padding: 80px 0 80px 100px;
-      width: 550px;
+      bottom: 0;
+      right: 0;
     }
     .vr-title {
-      font-size: 4em;
+      font-size: 3.5em;
       margin-bottom: 25px;
+      max-width: 470px;
     }
     .vr-description {
-      font-size: 1.21em;
+      font-size: 1.03em;
       color: rgba(0, 0, 0, 0.637);
       line-height: 1.5;
+      max-width: 470px;
     }
     .seeall-btn {
       display: flex;
       justify-content: space-between;
-      margin: 50px auto;
-      font-size: 2.8em;
+      align-items: center;
+      margin-bottom: 50px;
+      font-size: 3.5em;
     }
     .seeall-btn .btn {
       padding: 5px 30px;
@@ -86,6 +92,10 @@
       font-family: 'Alata';
       word-spacing: 2px;
       cursor: pointer;
+      display: flex;
+    }
+    .btn.btn-mobile {
+      display: none;
     }
     .btn:hover {
       color: white;
@@ -97,24 +107,25 @@
     }
     .flex {
       display: flex;
-      margin-top: 50px;
-      margin-bottom: 80px;
+      margin-top: 20px;
       justify-content: space-between;
     }
     .flex div {
       position: relative;
       cursor: pointer;
+      width: 24%;
     }
     .flex img {
       filter: brightness(90%);
+      width: 100%;
     }
     .flex .vr-item-description {
       position: absolute;
-      color: hsl(0, 0%, 93%);
+      color: hsla(0, 0%, 93%, 0.863);
       bottom: 4%;
-      width: 120px;
-      font-size: 1.4em;
-      left: 50%;
+      width: 180px;
+      font-size: 2.1em;
+      left: 48%;
       transform: translate(-50%,-50%);
     }
     .flex div:hover img {
@@ -127,8 +138,8 @@
     }
     .footer {
       background-color: black;
-      padding: 10px 120px;
-      margin: 0 auto;
+      padding: 10px 0;
+      margin: 120px auto 0;
       text-align: center;
     }
     .footer-flex {
@@ -136,7 +147,10 @@
       margin: 20px 0;
       justify-content: space-between;
     }
-    .social-icons a {
+    .social-icon-mobile {
+      display: none;
+    }
+    .social-icons a, .social-icon-mobile a {
       margin-left: 15px;
       text-decoration: none;
       color: white;
@@ -153,7 +167,7 @@
     }
     a::after {
       background: none repeat scroll 0 0 transparent;
-      bottom: 0;
+      bottom: -10px;
       content: "";
       display: block;
       height: 2px;
@@ -163,18 +177,154 @@
       width: 0;
       left: 0;
       right: 0;
+      margin: 0 auto;
     }
     a:hover::after {
-      margin: 0 auto;
       width: 40%; 
     }
     .copyright {
       color: rgba(255, 255, 255, 0.239);
     }
+    .menu-mobile {
+      display: none;
+    }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-    @media only screen and (max-width: 375px;) {
-      
+    @media only screen and (max-width: 1200px) {
+      .vr-section img {
+        width: 550px;
+      }
+      .vr-description-container {
+        background-color: white;
+        padding: 70px 0 0 100px;
+        margin-left: auto;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      .vr-title {
+        font-size: 2em;
+        margin-bottom: 25px;
+        max-width: 300px;
+      }
+      .vr-description {
+        font-size: .65em;
+        max-width: 300px;
+      }
+      .seeall-btn {
+        font-size: 2em;
+      }
+      .flex .vr-item-description {
+        font-size: 1.81em;
+        left: 60%;
+      }
+    }
+    @media only screen and (max-width: 900px) {
+      body {
+        position: relative;
+      }
+      .logo {
+        position: relative;
+        z-index: 2;
+      }
+      .container {
+        padding: 0 70px;
+      }
+      .menu-pc {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: 1;
+      }
+      .menu-pc a {
+        font-size: 3em;
+        margin-bottom: 20px;
+        top: 15%;
+        left: 15%;
+        width: 10%;
+      }
+      .menu-mobile {
+        display: block;
+      }
+      .fa-bars, .fa-times {
+        font-size: 25px;
+        z-index: 5;
+        position: relative;
+      }
+      .header-title {
+        padding: 20px;
+        font-size: 7.5vw;
+      }
+      .vr-section {
+        margin-bottom: 40px;
+        }
+      .vr-section img {
+        width: 100%;
+      }
+      .vr-description-container {
+        position: relative;
+        text-align: center;
+        padding: 0;
+        margin-top: 50px;
+      }
+      .vr-title, .vr-description {
+        margin: 0 auto;
+      }
+      .vr-title {
+        font-size: 4vw;
+      }
+      .vr-description {
+        font-size: 2.4vw;
+      }
+      .flex {
+        display: block;
+      }
+      .flex div {
+        width: 100%;
+        padding-top: 25px;
+      }
+      .flex .vr-item-description {
+        left: 23%;
+        top: 61%;
+        font-size: 2.1em;
+      }
+      .seeall-btn {
+        display: block;
+        text-align: center;
+      }
+      .seeall-btn .btn {
+        display: none;
+      }
+      .btn.btn-mobile {
+        display: block;
+        margin: 55px auto 0 auto;
+        padding: 10px 55px;
+        font-size: .75em;
+      }
+      .footer {
+        padding: 50px;
+      }
+      .footer-flex {
+        display: block;
+        margin: 0 auto;
+      }
+      .social-icons {
+        display: none;
+      }
+      .social-icon-mobile {
+        display: block;
+      }
+      .social-icon-mobile a {
+        margin: 15px 5px 35px 5px;
+      }
+      .menu-footer a {
+        display: block;
+        margin: 25px auto;
+      }
     }
   </style>
 </head>
@@ -183,8 +333,12 @@
     <div class="container">
       <div class="menu">
         <div>
-          <img src="images/logo.svg" alt=""></div>
-        <div>
+          <img class="logo" src="images/logo.svg" alt="">
+        </div>
+        <div class="menu-mobile" id="menu" onclick="mobileMenu();">
+          <i class="fas fa-bars" id="menu-btn"></i>
+        </div>
+        <div class="menu-pc" id="menu-items">
           <a href="">About</a>
           <a href="">Careers</a>
           <a href="">Events</a>
@@ -219,37 +373,42 @@
     <div class="vr-list">
       <div class="flex">
         <div>
-          <img src="images/desktop/image-deep-earth.jpg" alt="">
+          <img class="img-list" src="images/desktop/image-deep-earth.jpg" alt="">
           <div class="vr-item-description">DEEP EARTH</div>
         </div>
         <div>
-          <img src="images/desktop/image-night-arcade.jpg" alt="">
+          <img class="img-list" src="images/desktop/image-night-arcade.jpg" alt="">
           <div class="vr-item-description">NIGHT ARCADE</div>
         </div>
         <div>
-          <img src="images/desktop/image-soccer-team.jpg" alt="">
+          <img class="img-list" src="images/desktop/image-soccer-team.jpg" alt="">
           <div class="vr-item-description">SOCCER TEAM VR</div>
         </div>
         <div>
-          <img src="images/desktop/image-grid.jpg" alt="">
-          <div style="word-spacing: 13px;" class="vr-item-description">THE GRID</div>
+          <img class="img-list" src="images/desktop/image-grid.jpg" alt="">
+          <div class="vr-item-description">THE <br>GRID</div>
         </div>
       </div>
       <div class="flex">
         <div>
-          <img src="images/desktop/image-from-above.jpg" alt="">
+          <img class="img-list" src="images/desktop/image-from-above.jpg" alt="">
           <div class="vr-item-description">FROM UP ABOVE VR</div>
         </div>
         <div>
-          <img src="images/desktop/image-pocket-borealis.jpg" alt="">
+          <img class="img-list" src="images/desktop/image-pocket-borealis.jpg" alt="">
           <div class="vr-item-description">POCKET BOREALIS</div></div>
         <div>
-          <img src="images/desktop/image-curiosity.jpg" alt="">
+          <img class="img-list" src="images/desktop/image-curiosity.jpg" alt="">
           <div class="vr-item-description">THE CURIOSITY</div>
         </div>
         <div>
-          <img src="images/desktop/image-fisheye.jpg" alt="">
+          <img class="img-list" src="images/desktop/image-fisheye.jpg" alt="">
           <div class="vr-item-description">MAKE IT FISHEYE</div>
+        </div>
+      </div>
+      <div class="seeall-btn">
+        <div>
+          <button class="btn btn-mobile">SEE ALL</button>
         </div>
       </div>
     </div>
@@ -275,6 +434,12 @@
           <a href="">Products</a>
           <a href="">Support</a>
         </div>
+        <div class="social-icon-mobile">
+          <a href=""><img src="images/icon-facebook.svg" alt=""></a>
+          <a href=""><img src="images/icon-twitter.svg" alt=""></a>
+          <a href=""><img src="images/icon-pinterest.svg" alt=""></a>
+          <a href=""><img src="images/icon-instagram.svg" alt=""></a>
+        </div>
         <div class="copyright">© 2021 Loopstudios. All rights reserved.</div>
       </div>
     </div>
@@ -283,8 +448,48 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.facebook.com/Hac.Toyger/">Toyger</a>.
   </div>
-</body>
-<script>
+  <script>
+    // Menu mobile
+    function mobileMenu() {
+      var menuItems = document.getElementById("menu-items");
+      var menuBtn = document.getElementById("menu-btn");
 
-</script>
+      if (menuItems.style.display === "flex") {
+        menuBtn.className = "fas fa-bars";
+        menuItems.style.display = "none";
+      }
+      else {
+        menuBtn.className = "fas fa-times";
+        menuItems.style.display = "flex";
+        menuItems.style.backgroundColor = "rgba(0, 0, 0, 0.952)";
+      }
+    }
+
+    // Change source image PC - Mobile
+    window.onresize = function() {
+      if (window.matchMedia('screen and (max-width: 900px)').matches) {
+        platform = "mobile";
+      }
+      else {
+        platform = "desktop";
+      }
+      changeImg();
+      function changeImg() {
+        var imgList = document.getElementsByClassName("img-list");
+        var listImg = ["images/" + platform + "/image-deep-earth.jpg",
+                      "images/" + platform + "/image-night-arcade.jpg",
+                      "images/" + platform + "/image-soccer-team.jpg",
+                      "images/" + platform + "/image-grid.jpg",
+                      "images/" + platform + "/image-from-above.jpg",
+                      "images/" + platform + "/image-pocket-borealis.jpg",
+                      "images/" + platform + "/image-curiosity.jpg",
+                      "images/" + platform + "/image-fisheye.jpg"];
+        
+        for (var i = 0; i < imgList.length; i++) {
+          imgList[i].src = listImg[i];
+        }
+      }
+    };
+  </script>
+</body>
 </html>
